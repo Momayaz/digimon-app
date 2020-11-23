@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Details</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body id="detailsBody">
     <header>
         <header></header>
     </header>
-    <main>
+    <main id="detailsMain">
         <form action="/detail/<%=result.id%>?_method=PUT" method="POST">
-            <input type="text" name="name" value="<%=result.name%>">
-            <input type="text" name="img" value="<%=result.img%>">
-            <input type="text" name="level" value="<%=result.level%>">
+            <input type="text" name="name" value="<%=result.name%>"><br>
+            <input type="text" name="img" value="<%=result.img%>"><br>
+            <input type="text" name="level" value="<%=result.level%>"><br>
             <button type="submit">Update</button>
-        </form>
+        </form><br>
         <form action="/delete/<%=result.id%>?_method=DELETE" method="POST">
             <button type="submit">DELETE</button>
         </form>

@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    color: black;
+}
+
+#homeBody{
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a9e66ccf-90b4-4967-af80-9c1973b2a5a9/dbwbmgc-e62fe5d1-f3c6-4be3-baea-031cecfd0e4e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYTllNjZjY2YtOTBiNC00OTY3LWFmODAtOWMxOTczYjJhNWE5XC9kYndibWdjLWU2MmZlNWQxLWYzYzYtNGJlMy1iYWVhLTAzMWNlY2ZkMGU0ZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.yaUdHA1U2m_9Ka3gX39jWjahihNib2vCMpbg3M2-M5I');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#favBody{
+    background-image: url('https://animewp.com/wallpaper/2015/05/digimon-adventure-tri-24-anime-background.jpg');
+    background-size: cover;
+}
+
+#detailsBody{
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/f2bab600-c1cf-4827-93ad-4a670df46535/ddga0uy-36823a1d-80b3-4377-bf4a-30e95d6415ff.png');
+    background-size: cover;
+}
+
+#favImage{
+    opacity: 0.9;
+}
+
+#homeName {
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#homeP{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#homeImage{
+    border: 3px solid black;
+    
+   
+}
+
+button{
+    font-size: 30px;
+    margin-left: 25px;
+    border-radius: 20%;
+    color: cyan;
+}
+
+input{
+    font-size: 45px;
+    padding: 5px;
+    color: rgb(11, 12, 12);
+}
+
+#detailsMain{
+    border: 4px solid teal;
+    padding: 15px;
+    margin-top: 300px;
+    opacity: 0.9;
+    
+}

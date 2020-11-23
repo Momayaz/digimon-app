@@ -22,12 +22,13 @@ const DATABASE_URL = process.env.DATABASE_URL;
 const client = new pg.Client(DATABASE_URL);
 
 //routs
-app.get('/home', homePage);
+app.get('/', homePage);
 app.post('/adding', addToFav);
 app.get('/adding', showFav);
 app.get('/detail/:id', showDetails);
 app.put('/detail/:id', updating);
 app.delete('/delete/:id', deleting);
+
 
 //routs functions
 function homePage(req,res){
@@ -37,7 +38,7 @@ function homePage(req,res){
             return new Store(element);
         })
         res.render('home-page', {result:data.body});
-    })
+    }).catch(error => console.log(` couldn\t connect to \n${error}`));
 }
 
 
@@ -46,14 +47,14 @@ function addToFav(req,res){
     let values = [req.body.name, req.body.img, req.body.level];
     client.query(query,values).then(()=>{
         res.redirect('/adding');
-    })
+    }).catch(error => console.log(` couldn\t connect to \n${error}`));
 }
 
 function showFav(req,res){
     let query = 'SELECT * FROM toy;';
     client.query(query).then(data=>{
         res.render('fave-page', {result:data.rows})
-    })
+    }).catch(error => console.log(` couldn\t connect to \n${error}`));
 }
 
 
@@ -62,7 +63,7 @@ function showDetails(req,res){
     let value = [req.params.id];
     client.query(query,value).then(data=>{
         res.render('details-page', {result:data.rows[0]});
-    })
+    }).catch(error => console.log(` couldn\t connect to \n${error}`));
 }
 
 
@@ -71,7 +72,7 @@ function updating(req,res){
     let values = [req.body.name, req.body.img, req.body.level, req.params.id];
     client.query(query,values).then(()=>{
         res.redirect('/adding');
-    })
+    }).catch(error => console.log(` couldn\t connect to \n${error}`));
 }
 
 
@@ -80,7 +81,7 @@ function deleting(req,res){
     let value = [req.params.id];
     client.query(query,value).then(()=>{
         res.redirect('/adding');
-    })
+    }).catch(error => console.log(` couldn\t connect to \n${error}`));
 }
 
 function Store(data){
@@ -92,4 +93,4 @@ function Store(data){
 
 client.connect().then(()=>{
     app.listen(PORT,()=>console.log(`App is listening to ${PORT}`));
-})
+}).catch(error => console.log(` couldn\t connect to database\n${error}`));
