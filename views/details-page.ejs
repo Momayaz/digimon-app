@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <header></header>
+    </header>
+    <main>
+        <form action="/detail/<%=result.id%>?_method=PUT" method="POST">
+            <input type="text" name="name" value="<%=result.name%>">
+            <input type="text" name="img" value="<%=result.img%>">
+            <input type="text" name="level" value="<%=result.level%>">
+            <button type="submit">Update</button>
+        </form>
+        <form action="/delete/<%=result.id%>?_method=DELETE" method="POST">
+            <button type="submit">DELETE</button>
+        </form>
+    </main>
+</body>
+</html>

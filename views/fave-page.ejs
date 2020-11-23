@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <main>
+        <%result.forEach(element=>{%>
+            <section>
+                <h2><%=element.name%></h2>
+                <img src="<%=element.img%>" alt="">
+                <P><%=element.level%></P>
+                <form action="/detail/<%=element.id%>">
+                    <button type="submit">Details</button>
+                </form>
+                <p>==============================<>========================</p>
+            </section>
+        <%})%>
+        
+    </main>
+</body>
+</html>
